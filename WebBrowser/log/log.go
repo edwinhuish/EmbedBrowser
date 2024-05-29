@@ -1,13 +1,13 @@
 package log
 
 func Info(format string, vars ...any) {
-	log("[EmbedBrowser INFO] "+format, vars...)
+	log("[WBrowser INFO] "+format, vars...)
 }
 
 func Warning(format string, vars ...any) {
-	log("[EmbedBrowser WARN] "+format, vars...)
+	log("[WBrowser WARN] "+format, vars...)
 }
 
 func Error(format string, vars ...any) {
-	log("[EmbedBrowser ERROR] "+format, vars...)
+	log("[WBrowser ERROR] "+format, vars...)
 }
