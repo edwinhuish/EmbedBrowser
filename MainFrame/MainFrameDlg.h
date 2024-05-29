@@ -1,7 +1,8 @@
 ﻿
 // MainFrameDlg.h: 头文件
 //
-#include "WebBrowser.h"
+#include "WBrowser.h"
+#include "WEnergy.h"
 
 #pragma once
 
@@ -25,6 +26,8 @@ public:
 // 实现
 protected:
 	HICON m_hIcon;
+    WBrowser m_brw;
+    WEnergy m_egy;
 
 	// 生成的消息映射函数
 	virtual BOOL OnInitDialog();
@@ -33,4 +36,5 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedButton2();
 };

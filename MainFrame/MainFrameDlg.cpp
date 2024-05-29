@@ -21,6 +21,8 @@ CMainFrameDlg::CMainFrameDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_MAINFRAME_DIALOG, pParent)
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+	m_brw.LoadDLL();
+	m_egy.LoadDLL();
 }
 
 void CMainFrameDlg::DoDataExchange(CDataExchange* pDX)
@@ -32,6 +34,7 @@ BEGIN_MESSAGE_MAP(CMainFrameDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON1, &CMainFrameDlg::OnBnClickedButton1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CMainFrameDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -91,5 +94,11 @@ HCURSOR CMainFrameDlg::OnQueryDragIcon()
 
 void CMainFrameDlg::OnBnClickedButton1()
 {
-	// TODO: 在此添加控件通知处理程序代码
+	m_brw.Open();
+}
+
+
+void CMainFrameDlg::OnBnClickedButton2()
+{
+	m_egy.Open();
 }
